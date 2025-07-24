@@ -17,11 +17,14 @@ function draw() {
   vertex(width / 2, height / 2);
   for (let angle = 0; angle <= 360; angle += angleStep) {
     let vx = width / 2 + cos(radians(angle)) * radius;
-    let vy = height / 2 + cos(radians(angle)) * radians;
+    let vy = height / 2 + sin(radians(angle)) * radius;
     vertex(vx, vy);
-    fill(angle, mouseX, mosueY);
+    fill(angle, mouseX, mouseY);
   }
   endShape();
+  fill(0);
+  text("please type 1 ~ 6", 10, 20);
+  text("segmentCount = " + segmentCount, 10, 30);
 }
 
 function keyPressed() {
