@@ -23,7 +23,7 @@ function draw() {
   }
   endShape();
   fill(0);
-  text("please type 1 ~ 6", 10, 20);
+  text("please type a number from 1 to 5", 10, 20);
   text("segmentCount = " + segmentCount, 10, 30);
 }
 
